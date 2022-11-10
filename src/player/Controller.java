@@ -70,10 +70,11 @@ public class Controller {
     }
 
     public void listItemClicked(MouseEvent e){
-        System.err.print("MouseEvent");
+        //System.err.print("MouseEvent");
         this.playlistCounter = e.getClickCount() == 2 
                             ? this.songsListView.getSelectionModel().getSelectedIndex()
                             : this.playlistCounter;
+        if(e.getClickCount() == 2) playSong(null);
     }
 
     private void initializeFileChooserIfNeeded(){
