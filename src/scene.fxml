@@ -10,7 +10,7 @@
    <children>
       <Button layoutX="43.0" layoutY="226.0" mnemonicParsing="false" onAction="#loadSongFiles" text="Load Songs" />
       <Button layoutX="133.0" layoutY="358.0" mnemonicParsing="false" onAction="#playSong" text="Play" />
-      <ListView fx:id="songsListView" layoutX="4.0" layoutY="3.0" prefHeight="211.0" prefWidth="300.0">
+      <ListView fx:id="songsListView" layoutX="4.0" layoutY="3.0" onMouseClicked="#listItemClicked" prefHeight="211.0" prefWidth="300.0">
          <effect>
             <Glow />
          </effect></ListView>

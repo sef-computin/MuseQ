@@ -7,9 +7,11 @@ import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.FileChooser;
@@ -64,8 +66,14 @@ public class Controller {
         this.musicFilesList.clear();
         this.songsListView.setItems(songsLabels);
         this.currentSongLabel.setText("...");
-        this.mediaPlayer.stop();
-        this.mediaPlayer.dispose();
+        if(this.mediaPlayer != null) this.mediaPlayer.dispose();
+    }
+
+    public void listItemClicked(MouseEvent e){
+        System.err.print("MouseEvent");
+        this.playlistCounter = e.getClickCount() == 2 
+                            ? this.songsListView.getSelectionModel().getSelectedIndex()
+                            : this.playlistCounter;
     }
 
     private void initializeFileChooserIfNeeded(){
@@ -74,5 +82,4 @@ public class Controller {
 
         this.filechooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Music", "*.mp3"));
     }
-
 }
