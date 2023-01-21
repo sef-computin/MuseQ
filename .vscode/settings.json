@@ -1,0 +1,8 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/b-da/programs/java-libs/jlayer-1.0.1.jar",
+        "/home/b-da/programs/java-libs/javafx-19/**/*.jar"
+    ],
+    "java.project.outputPath": "out"
+}

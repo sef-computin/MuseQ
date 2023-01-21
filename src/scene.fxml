@@ -5,19 +5,41 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="308.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="player.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="308.0" style="-fx-background-color: #FFF5F5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="player.Controller">
    <children>
-      <Button layoutX="43.0" layoutY="226.0" mnemonicParsing="false" onAction="#loadSongFiles" text="Load Songs" />
-      <Button layoutX="133.0" layoutY="358.0" mnemonicParsing="false" onAction="#playSong" text="Play" />
+      <Button layoutX="43.0" layoutY="226.0" mnemonicParsing="false" onAction="#loadSongFiles" text="Load Songs">
+         <font>
+            <Font name="Bryndan Write Book" size="13.0" />
+         </font></Button>
+      <Button id="playButton" fx:id="playButton" layoutX="123.0" layoutY="358.0" mnemonicParsing="false" onAction="#playButtonPushed" prefHeight="28.0" prefWidth="63.0" text="Play">
+         <font>
+            <Font name="Bryndan Write Book" size="16.0" />
+         </font></Button>
       <ListView fx:id="songsListView" layoutX="4.0" layoutY="3.0" onMouseClicked="#listItemClicked" prefHeight="211.0" prefWidth="300.0">
          <effect>
             <Glow />
          </effect></ListView>
-      <Button layoutX="64.0" layoutY="358.0" mnemonicParsing="false" onAction="#playPrev" text="Prev" />
-      <Button layoutX="199.0" layoutY="358.0" mnemonicParsing="false" onAction="#playNext" text="Next" />
-      <Label fx:id="currentSongLabel" alignment="CENTER" layoutX="12.0" layoutY="303.0" prefHeight="40.0" prefWidth="286.0" text="..." textAlignment="CENTER" />
-      <Button layoutX="175.0" layoutY="226.0" mnemonicParsing="false" onAction="#clearPlaylist" text="Clear Playlist" />
-      <Label alignment="CENTER" layoutX="78.0" layoutY="285.0" prefHeight="18.0" prefWidth="154.0" text="Now Playing:" />
+      <Button layoutX="64.0" layoutY="358.0" mnemonicParsing="false" onAction="#playPrev" text="Prev">
+         <font>
+            <Font name="Bryndan Write Book" size="13.0" />
+         </font></Button>
+      <Button layoutX="199.0" layoutY="358.0" mnemonicParsing="false" onAction="#playNext" text="Next">
+         <font>
+            <Font name="Bryndan Write Book" size="13.0" />
+         </font></Button>
+      <Label fx:id="currentSongLabel" alignment="CENTER" layoutX="12.0" layoutY="292.0" prefHeight="40.0" prefWidth="286.0" text="..." textAlignment="CENTER">
+         <font>
+            <Font name="Blogger Sans" size="12.0" />
+         </font></Label>
+      <Button layoutX="175.0" layoutY="226.0" mnemonicParsing="false" onAction="#clearPlaylist" text="Clear Playlist">
+         <font>
+            <Font name="Bryndan Write Book" size="13.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutX="77.0" layoutY="274.0" prefHeight="18.0" prefWidth="154.0" text="Now Playing:">
+         <font>
+            <Font name="Vintii Bold" size="13.0" />
+         </font></Label>
    </children>
 </AnchorPane>

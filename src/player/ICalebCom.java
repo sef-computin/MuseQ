@@ -1,19 +1,18 @@
 package player;
 	
-import java.io.File;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
+
 
 
 public class ICalebCom extends Application {
 
 	private static Stage pStage;
+
 	@Override
 	public void start(Stage primaryStage) {
 		try {
